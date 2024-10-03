@@ -21,10 +21,6 @@ function optimalFreelancing(jobs) {
   const optimalSchedule = {};
   let total = 0;
 
-  jobs.sort((a, b) => {
-    return a.deadline - b.deadline;
-  });
-
   for (let i = 0; i < jobs.length; i++) {
     if (optimalSchedule[jobs[i]]?.deadline) {
       if (optimalSchedule[jobs[i].deadline] > jobs[i].payment) {
